@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    
+    <title>การใช้ตารางจัดการฟอร์มรับส่งข้อมูล</title>
+    <!-- ลิงก์ฟอนต์ Kanit -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit&display=swap">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f0f8ff; /* สีพื้นหลังด้านนอกกรอบ */
+            padding: 20px; /* เพิ่มช่องว่างรอบกรอบ */
+        }
+        .form-container {
+            width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* สีพื้นหลังด้านในกรอบ */
+            border: 2px solid #00eeff; /* สีของกรอบ */
+            border-radius: 10px; /* ทำให้มุมของกรอบเป็นโค้ง */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเพื่อความสวยงาม */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #00eeff; 
+            font-size: 16px;
+        }
+        input[type="reset"] {
+            background-color: #00eeff; 
+        }
+        input[type="submit"]:hover {
+            background-color: #0e6962; 
+        }
+        input[type="reset"]:hover {
+            background-color: #0e6962; 
+        }
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <form action="check.php" method="post">
+        <caption><center>การใช้ตารางจัดการฟอร์มรับส่งข้อมูล</center></caption><br>
+        <table border="0" cellspacing="0" cellpadding="3" align="center">
+            <tr>
+                <td>ชื่อผู้ใช้งาน</td>
+                <td></td>
+                <td><input type="text" name="user"></td>
+            </tr>
+            <tr>
+                <td>ชื่อจริง</td>
+                <td></td>
+                <td><input type="text" name="firstname"></td>
+            </tr>
+            <tr>
+                <td>นามสกุล</td>
+                <td></td>
+                <td><input type="text" name="lastname"></td>
+            </tr>
+            <tr>
+                <td>รหัสผ่าน</td>
+                <td></td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>เพศ</td>
+                <td></td>
+                <td>
+                    <input type="radio" name="gender" value="male"> ชาย 
+                    <input type="radio" name="gender" value="female"> หญิง
+                </td>
+            </tr>
+            <tr>
+                <td>อายุ</td>
+                <td></td>
+                <td>
+                    <select name="age" size="1">
+                        <option value="1">1-10</option>
+                        <option value="2">11-20</option>
+                        <option value="3">21-30</option>
+                        <option value="4">31-40</option>
+                        <option value="5">41-50</option>
+                        <option value="6">51-60</option>
+                        <option value="7">61 ขึ้นไป</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>เงื่อนไข</td>
+                <td></td>
+                <td><input type="checkbox" name="conditions" value="yes"> ข้าพเจ้ายอมรับและยินดีตามข้อตกลง</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="submit" value="ตกลง"> 
+                    <input type="reset" value="ยกเลิก">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
